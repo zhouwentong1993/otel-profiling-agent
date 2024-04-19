@@ -1,7 +1,7 @@
 .PHONY: all all-common binary clean ebpf generate test test-deps protobuf docker-image agent legal
 
 SHELL:=/usr/bin/env bash
-
+export GOPROXY=https://goproxy.cn,direct
 all: generate ebpf binary
 
 # Removes the go build cache and binaries in the current project

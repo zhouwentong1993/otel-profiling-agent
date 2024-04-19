@@ -1,7 +1,7 @@
 FROM debian:testing
 
 WORKDIR /agent
-
+ENV GOPROXY=https://goproxy.cn,direct
 ARG arch=amd64
 
 RUN apt-get update -y && apt-get dist-upgrade -y && apt-get install -y \
